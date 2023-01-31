@@ -19,7 +19,7 @@ module.exports = {
 				seconLight50: "rgba(58, 65, 120, 0.5)",
 			}),
 			fontFamily: {
-				title: ["IstokWeb", "sans-serif"],
+				main: ["IstokWeb", "sans-serif"],
 				body: ["OpenSans", "sans-serif"],
 			},
 			dropShadow: {
