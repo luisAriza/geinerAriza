@@ -31,9 +31,9 @@
 }
 
 html {
-	@apply scroll-smooth bg-secondary text-white tracking-wide;
+	@apply m-0 p-0 box-border scroll-smooth tracking-wide bg-secondary text-white;
 }
 
 #app {
-	@apply font-main py-14 px-5;
+	@apply font-main py-14 px-5 grid gap-14;
 }
