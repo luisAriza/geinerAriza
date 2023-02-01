@@ -6,7 +6,7 @@
 	<!-- <RouterView></RouterView> -->
 	<header id="header">
 		<figure class="profile">
-			<img src="/profile.png" alt="foto del perfil" width="160" height="160" />
+			<img src="/profile.webp" alt="foto del perfil" width="160" height="160" />
 		</figure>
 		<h1 class="title">
 			<strong>Geiner Ariza</strong>
@@ -34,59 +34,69 @@
 			<p>posuere et tempus vel, posuere vitae quam.</p>
 		</article>
 		<section class="channels">
-			<article class="telegram">
+			<a href="#" class="channel telegram">
 				<div class="content">
 					<h3>
-						Únete GRATIS a mi <strong>COMUNIDAD</strong> de
+						Únete GRATIS a mi <strong class="highlight">COMUNIDAD</strong> de
 						<strong>TELEGRAM</strong>
 					</h3>
-					<p>Grupo de apoyo - Múltiples cuentas de ingreso - Asesoría</p>
+					<p>Grupo de apoyo - Múltiples cuentas de ingreso - Asesoría.</p>
 				</div>
 				<IconTelegram class="icon-mask" />
-			</article>
-			<article class="instagram">
+			</a>
+			<a href="#" class="channel instagram">
 				<div class="content">
-					<h3>Sígueme en mi canal de INSTAGRAM</h3>
-					<p>CLASES GRATUITAS para empezar a ganar dinero en línea</p>
+					<h3>Sígueme en mi canal de <strong>INSTAGRAM</strong></h3>
+					<p>
+						<strong class="highlight">CLASES GRATUITAS</strong> para empezar a
+						<strong>ganar dinero</strong> en línea.
+					</p>
 				</div>
 				<IconInstagram class="icon-mask" />
-			</article>
-			<article class="youtube">
+			</a>
+			<a href="#" class="channel youtube">
 				<div class="content">
-					<h3>Suscríbete a mi canal de YOUTUBE</h3>
-					<p>APRENDE PASO A PASO como ganar dinero en línea desde cero</p>
+					<h3>Suscríbete a mi canal de <strong>YOUTUBE</strong></h3>
+					<p>
+						<strong>APRENDE PASO A PASO</strong> como
+						<strong class="highlight">ganar dinero en línea</strong>
+						desde cero.
+					</p>
 				</div>
 				<IconYoutube class="icon-mask" />
-			</article>
-			<article class="tiktok">
+			</a>
+			<a href="#" class="channel tiktok">
 				<div class="content">
-					<h3>Sígueme en TIKTOK</h3>
+					<h3>Sígueme en <strong>TIKTOK</strong></h3>
 					<p>
-						Para ver mis RESULTADOS, TESTIMONIOS, consejos, estrategias, tips
+						Para ver mis <strong class="highlight">RESULTADOS</strong>,
+						<strong class="highlight">TESTIMONIOS</strong>, consejos,
+						estrategias, tips.
 					</p>
 				</div>
 				<IconTiktok class="icon-mask" />
-			</article>
-			<article class="facebook">
+			</a>
+			<a href="#" class="channel facebook">
 				<div class="content">
-					<h3>Sígueme en fACEBOOK</h3>
+					<h3>Sígueme en <strong>FACEBOOK</strong></h3>
 					<p>
-						Para conocer un poco MI HISTORIA y cómo construí un estilo de vida
-						digital
+						Para conocer un poco
+						<strong class="highlight">MI HISTORIA</strong> y cómo construí un
+						<strong>estilo de vida digital</strong>.
 					</p>
 				</div>
 				<IconFacebook class="icon-mask" />
-			</article>
-			<article class="whatsapp">
+			</a>
+			<a href="#" class="channel whatsapp">
 				<div class="content">
-					<h3>¡CHATEA CONMIGO!</h3>
+					<h3><strong class="highlight">¡CHATEA CONMIGO!</strong></h3>
 					<p>
 						¿Quieres empezar a generar altos ingresos en línea con poca
 						inversión y sin importar tu experiencia o conocimientos actuales?
 					</p>
 				</div>
 				<IconWhatsapp class="icon-mask" />
-			</article>
+			</a>
 		</section>
 		<section class="video">
 			<video src=""></video>
@@ -123,40 +133,49 @@
 			@apply text-4xl uppercase tracking-wider drop-shadow-title mb-2;
 		}
 		& h2 {
-			@apply text-xl text-primary mb-2;
+			@apply text-2xl text-primary mb-2;
 		}
 		& p {
-			@apply font-body text-base mb-6;
+			@apply font-body text-lg mb-6;
 		}
 		& .networking {
 			@apply flex gap-6 items-center;
 		}
 		& svg {
-			@apply fill-white;
+			@apply w-7 h-7 fill-white opacity-75;
 		}
 	}
 	#body {
-		@apply w-full grid gap-10;
+		@apply w-full grid gap-16;
 	}
 	.description {
 		@apply w-full py-10 px-6 grid gap-5 rounded-xl font-body font-light text-[.94rem] text-center drop-shadow-card bg-seconLight50;
 	}
 	.channels {
-		@apply w-full grid gap-6;
-		& article {
-			@apply flex items-center py-5 px-4 rounded-xl border-[1.5px] border-white bg-gradient-to-br from-seconLight to-seconDark;
+		@apply w-full grid gap-8;
+		& .channel {
+			@apply flex items-center gap-2 py-6 px-4 rounded-xl border border-white bg-gradient-to-br from-seconLight to-seconDark transition-all duration-200 hover:drop-shadow-card hover:border-seconLight hover:to-seconLight;
 		}
 		& .content {
 			@apply w-3/4 text-center;
-		}
-		& h3 {
-			@apply text-[.94rem] leading-5 mb-3;
-		}
-		& p {
-			@apply font-body font-light text-xs;
+			& h3 {
+				@apply text-base leading-5 mb-3;
+			}
+			& p {
+				@apply font-body font-light text-sm;
+			}
+			& strong {
+				@apply font-bold;
+			}
+			& .highlight {
+				@apply uppercase text-primary;
+			}
 		}
 		& .icon-mask {
-			@apply w-1/4 h-full max-h-24 fill-primary opacity-20;
+			@apply w-1/4 h-full max-h-24 fill-primary opacity-25;
+		}
+		& .channel:hover .icon-mask {
+			@apply opacity-75;
 		}
 	}
 	#footer {
