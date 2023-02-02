@@ -84,7 +84,7 @@
 
 <script setup></script>
 
-<style lang="postcss">
+<style scoped lang="postcss">
 	#body {
 		@apply w-full grid gap-16;
 	}
@@ -110,12 +110,6 @@
 			& .highlight {
 				@apply uppercase text-primary;
 			}
-		}
-		& .icon-mask {
-			@apply w-1/4 h-full max-h-24 fill-white opacity-25 transition-all duration-300;
-		}
-		& .channel:hover .icon-mask {
-			@apply fill-primary opacity-75;
 		}
 	}
 </style>
